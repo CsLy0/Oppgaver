@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knapp Handling</title>
+</head>
+<body>
+    <button onclick="navnPåFunksjon()">
+
+      <script> 
+      function navnPåFunksjon() {
+        console.log("Knappen ble trykket");
+    // her skal alle kodelinjene som skal kjøres ligge
+    // Javascript kjører alle kodelinjer i rekkefølge fra topp til bunn så husk på
+    // rekkefølge nmår du skriver koden din
+  }
+
+</script>
+
+<div id="tekstDiv">Start Tekst Her</div>
+<button onclick="oppdaterTekst()">Trykk på denne knappen for å oppdatere teksten!</button>
+<script>
+  function oppdaterTekst() {
+    document.getElementById('tekstDiv').innerHTML = "Ny tekst her nå som knappen er trykket på!";
+  }
+
+</script>
+
+</body>
+</html>
