@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visuell teller!</title>
+<style>
+    body {
+        font-family: 'Times New Roman', Times, serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .button {
+        padding: 10px 20px;
+        font-size: 20px;
+        margin: 10px;
+        cursor: pointer;
+    }
+    #number {
+        font-size: 40px;
+        margin: 20px;
+    }
+</style>
+</head>
+<body>
+    
+    <div id="number">0</div>
+    <button class="button" id="increaseButton">Øk</button>
+    <button class="button" id="decreaseButton">Reduser</button>
+
+    <script>
+        // initialiserer variablen med startverdi 0
+        let number = 0;
+
+        // Hent referanse til HTML-elementene
+        const numberDisplay = document.getElementById('number');
+        const increaseButton = document.getElementById('increaseButton');
+        const decreaseButton = document.getElementById('decreaseButton');
+
+        // Funksjon for å oppdatere tallet på skjermen
+        function updateNumber() {
+            numberDisplay.textContent = number;
+        }
+
+        // Event listener for reduser-knapp
+        decreaseButton.addEventListener('click', function() {
+            number--;
+            updateNumber();
+        });
+
+        // Event listener for øk-knapp
+
+        increaseButton.addEventListener('click', function() {
+            number++;
+            updatenumber();
+        });
+    </script>
+    
+</body>
+</html>
