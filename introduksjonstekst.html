@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introduksjonstekst</title>
+    <style>
+        body {
+            background-color: pink;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        .button {
+            padding: 40px;
+            font-size: 20px;
+            margin: 10px;
+            cursor: crosshair;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+       body {
+        font-family: 'Times New Roman', Times, serif;
+        transition: background-color 0.3s;
+       }
+
+       button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: crosshair;
+       }
+
+    </style>
+</head>
+<body>
+    <h1>Hei, Jeg heter Marius. Mine hobbyer er</h1>
+    <p>* Gaming</p>
+    <p>* Twintip</p>
+
+    <button id="changeBackgroundcolor">changeBackgroundcolor</button>
+
+    <!--Bilder skal ligge i HTML-->
+
+    <div class="button">
+        <img src="https://scontent.fsvg1-1.fna.fbcdn.net/v/t39.30808-6/275745714_10216545574630794_2270018754558231896_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=HGyxSuAI7U0Q7kNvgH41ZiU&_nc_zt=23&_nc_ht=scontent.fsvg1-1.fna&_nc_gid=A-Gkkf7OCwmVXV7Zt5P0kVR&oh=00_AYCFVz23q4rsbKXfedLvV44-Jn-z6kHCYCmLvY55u34tmQ&oe=6797F19D" width="400" height="300"> 
+    </div>
+
+    <script>
+        // Javascript for å endre bakgrunnsfarge
+
+        document.getElementById ('changeBackgroundcolor').addEventListener('click', function(){
+            document.body.style.backgroundColor = document.body.style.backgroundColor == 'pink' ? 'lightblue' : 'pink';
+        });
+    </script>
+</body>
+</html>
