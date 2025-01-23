@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fargetekst</title>
+</head>
+<body>
+    
+    <div id="mainDiv"></div>
+    <button onclick="Kake1()">Test 1</button>
+    <button onclick="Kake2()">Test 2</button>
+
+    <script>
+        function Kake1() {
+            document.getElementById('mainDiv').innerHTML = /*html*/`
+            <div style="background-color:red; width: 100%; height 100px;">
+            `;
+        }
+
+        function Kake2() {
+            document.getElementById('mainDiv').innerHTML = /*html*/`
+            <div style="background-color:blue; width: 100%; height: 100px">
+                `;
+        }
+    </script>
+</body>
+</html>
