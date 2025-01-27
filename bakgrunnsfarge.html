@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bakgrunnsfarge</title>
+    <style>
+    body {
+        background-color: red;
+        font-family: 'Times New Roman', Times, serif;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .button {
+        padding: 40px;
+        font-size: 20px;
+        margin: 10px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            transition: background-color 0,3s;
+        }
+    
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <button id="changeBackgroundcolor">changeBackgroundcolor</button>
+
+    <div class="button"></div>
+
+    <script>
+        document.getElementById ('changeBackgroundcolor').addEventListener('click', function(){
+            document.body.style.backgroundColor = 
+            document.body.style.backgroundColor == 'red' ? 'green' :
+            document.body.style.backgroundColor == 'green' ? 'blue' : 'red';
+        });
+    </script>
+</body>
+</html>
