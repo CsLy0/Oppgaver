@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Own Story - Wordchooser</title>
+    <style>
+        div{
+            float: left;
+            margin: 20px;
+
+        }
+
+        .storyBox{
+            border: 4px dashed pink;
+            padding: 30px;
+            font-size: 30px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+
+        .startRow{
+            clear:left;
+
+        }
+
+        .choiceBoxes{
+            font-size: 40px;
+            background-color: lightcoral;
+            border: 4px solid cornflowerblue;
+            border-radius: 50%;
+            padding: 15px;
+            width: 70px;
+            height: 35px;
+            text-align:center;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="storyBox" id="storyOutput">
+
+    </div>
+    <div class="startRow choiceBoxes"   onclick="chooseFirstWord(this)">Green</div>
+    <div class="choiceBoxes"    onclick="chooseFirstWord(this)">Red</div>
+
+    <div class="startRow choiceBoxes"   onclick="chooseSecondWord(this)">Cat</div>
+    <div class="choiceBoxes"    onclick="chooseSecondWord(this)">Man</div>
+
+    <div class="startRow choiceBoxes"   onclick="chooseThirdWord(this)">Stared</div>
+    <div class="choiceBoxes"    onclick="chooseThirdWord(this)">Jumped</div>
+
+    <div class="startRow choiceBoxes"   onclick="chooseFourthWord(this)">Pool</div>
+    <div class="choiceBoxes"    onclick="chooseFourthWord(this)">Wall</div>
+
+    <script>
+        const output = document.getElementById("storyOutput");
+        let firstWord = "___";
+        let secondWord = "___";
+        let thirdWord = "___";
+        let fourthWord = "___";
+        buildStory();
+
+        function buildStory(){
+            output.innerHTML = `
+            Once, There was a ${firstWord} ${secondWord} that ${thirdWord} in the ${fourthWord} -
+            and great things happened. The End.
+`;
+
+// output.innerHTML = ' Once, there was a ' + firstWord + ' ' + secondWord +
+//                    ' that ' + thirdWord + ' in the '+ fourthWord
+//                   +' and great things happened. The End.';
+
+        }
+
+        function chooseFirstWord(choice){
+            firstWord = choice.innerHTML;
+            buildStory();
+
+        }
+
+        function chooseSecondWord(choice){
+            secondWord = choice.innerHTML;
+            buildStory();
+
+        }
+
+        function chooseThirdWord(choice){
+            thirdWord = choice.innerHTML;
+            buildStory();
+
+        }
+
+        function chooseFourthWord(choice){
+            fourthWord = choice.innerHTML;
+            buildStory();
+
+        }
+    </script>
+</body>
+
+</html>
